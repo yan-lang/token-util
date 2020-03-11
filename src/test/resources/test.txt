@@ -1,0 +1,5 @@
+unknown, unknown
+identifier, identifier
+int_const, integer constant
+plus, plus+
+minus, minus-, 3
