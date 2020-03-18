@@ -43,7 +43,10 @@ unknown, unknown
 identifier, identifier
 int_const, integer constant
 plus, plus+
-minus, minus-, 3
+minus, minus-, id=3, group=binaryOp
+kw_if, Keyword if, if, group=keyword
+kw_true, Keyword true, true, group=keyword
+kw_false, Keyword false, false, group=keyword
 ```
 
 - Output:
@@ -58,11 +61,26 @@ public interface Tokens {
 
     int INT_CONST = 2;
 
-    int PLUS = 4;
+    int PLUS = 3;
 
     int MINUS = 3;
 
-    List<String> tokenNames = List.of("unknown", "identifier", "integer constant", "plus+", "minus-");
+    int KW_IF = 4;
+
+    int KW_TRUE = 5;
+
+    int KW_FALSE = 6;
+
+
+    List<String> tokenNames = List.of("unknown", "identifier", "integer constant", "plus+", "minus-", "Keyword if", "Keyword true", "Keyword false");
+
+    List<String> tokenSymbolNames = List.of("unknown", "identifier", "integer constant", "plus+", "minus-", "if", "true", "false");
+
+    Map<String, Integer> binaryOp = Map.of("minus-", 3);
+
+    Map<String, Integer> keyword = Map.of("if", 4, "true", 5, "false", 6);
+
+
 }
 ```
 
