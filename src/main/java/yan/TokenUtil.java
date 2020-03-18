@@ -82,6 +82,11 @@ public class TokenUtil implements Callable<Integer> {
 
     // extract user defined ID
     for (int i = 0; i < lines.size(); i++) {
+      // ignore empty line
+      if (lines.get(i).strip().equals("")) {
+        continue;
+      }
+
       String[] items = lines.get(i).split(",");
       if (items.length < 1 | items.length > 3) {
         throw new RuntimeException(String.format(incorrect_format_prompt, i + 1));
