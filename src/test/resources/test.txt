@@ -2,4 +2,7 @@ unknown, unknown
 identifier, identifier
 int_const, integer constant
 plus, plus+
-minus, minus-, 3
+minus, minus-, id=3, group=binaryOp
+kw_if, Keyword if, if, group=keyword
+kw_true, Keyword true, true, group=keyword
+kw_false, Keyword false, false, group=keyword
