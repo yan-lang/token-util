@@ -12,7 +12,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-@Command(description = "A useful utility for generating token-type java interface for Yan compiler framework.",
+@Command(description =
+    "A useful utility for generating token-type java interface for Yan compiler framework.",
     name = "tokenutil", mixinStandardHelpOptions = true)
 public class TokenUtil implements Callable<Integer> {
 
@@ -24,11 +25,13 @@ public class TokenUtil implements Callable<Integer> {
       + "    add, add+, 1\n"
       + "    sub\n"
       + "    kw_var, keyword var";
+
   @Parameters(index = "0", description = "The file contain the token definition.")
   File inputFile;
   @Option(names = {"-o",
       "--output"}, defaultValue = "Tokens.java", description = "Output file for result")
   File outputFile;
+
   Set<Integer> usedIDs = new HashSet<>();
   Integer availableID = 0;
 
