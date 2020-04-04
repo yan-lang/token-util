@@ -14,7 +14,7 @@ public class CodeGenerator {
   }
 
   public String generate(List<TokenType> tokenTypes) {
-    String importPart = "import java.util.List;";
+    String importPart = "import java.util.List;\n" + "import java.util.Map;";
 
     List<String> descriptions = new ArrayList<>();
     List<String> symbols = new ArrayList<>();
