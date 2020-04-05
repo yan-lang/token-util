@@ -41,8 +41,9 @@ public class CodeGenerator {
     groups.forEach((groupName, members) -> {
       StringBuilder elements = new StringBuilder();
       members.forEach(pair -> {
-        elements.append(String.format("\"%s\"", pair.getKey())).append(", ")
-            .append(pair.getValue()).append(", ");
+        // Map.entry(key, value)
+        elements.append("Map.entry(").append(String.format("\"%s\"", pair.getKey())).append(", ")
+            .append(pair.getValue()).append(')').append(", ");
       });
       elements.deleteCharAt(elements.length() - 1);
       elements.deleteCharAt(elements.length() - 1);
@@ -81,7 +82,7 @@ public class CodeGenerator {
       + "%s\n"
       + "}";
 
-  private static String groupTemplate = "    Map<String, Integer> %s = Map.of(%s);";
+  private static String groupTemplate = "    Map<String, Integer> %s = Map.ofEntries(%s);";
 
   private static class Pair<T1, T2> {
 
