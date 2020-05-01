@@ -34,6 +34,11 @@ You have to follow this format to write your token type definition to make progr
 4. Every block should be separated by comma: `,` .
 5. **It is your responsibility to make sure the type name is a valid Java identifier.**
 
+**Note**
+
+> If you want to use these character `,`, `=`, `/`, you have to escape them first. 
+> The method is identical as it is in C string escape.
+
 Example:
 
 - Input:
