@@ -1,0 +1,33 @@
+unknown
+identifier,  identifier
+int lit,     integer literal
+float lit,   float literal
+add,         add,      +
+minus,       minus,    -
+multi,       multiply, *
+div,         divide,   //
+gt,          greater than,          >
+gte,         greater than or equal, >/=
+lt,          less than,             <
+lte,         less than or equal,    </=
+eq,          equal,           /=/=
+neq,         not equal,       !/=
+assign,      assign,          /=
+rel or,      relational or,   ||
+rel and,     relational and,  &&
+rel not,     relational not,  !
+kw int,      symbol=int,      group=keyword
+kw float,    symbol=float,    group=keyword
+kw void,     symbol=void,     group=keyword
+kw if,       symbol=if,       group=keyword
+kw else,     symbol=else,     group=keyword
+kw while,    symbol=while,    group=keyword
+kw continue, symbol=continue, group=keyword
+kw break,    symbol=break,    group=keyword
+kw return,   symbol=return,   group=keyword
+lparen,      left parenthesis,  (
+rparen,      right parenthesis, )
+lbrace,      left brace,        {
+rbrace,      right brace,       }
+semicolon,   semicolon,         ;
+comma,       comma,            /,

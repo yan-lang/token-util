@@ -30,7 +30,7 @@ public class Main implements Callable<Integer> {
   public Integer call() {
     try {
       List<String> lines = FileUtils.readLines(inputFile, "UTF-8");
-      List<TokenType> tokenTypes = new TokenTypeParser().parse(lines);
+      List<TokenType> tokenTypes = new Parser().parse(lines);
       String code = new CodeGenerator(FilenameUtils.removeExtension(outputFile.getName()))
           .generate(tokenTypes);
       FileUtils.write(outputFile, code, "UTF-8");
